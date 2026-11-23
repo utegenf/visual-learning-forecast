@@ -12,6 +12,14 @@ Do population measurements of inhibitory neurons in mouse visual cortex improve 
 
 Figures: `results/figures/fig1_learning_curves.png`, `fig2_neural_across_sessions.png`, `fig3_h1_h2.png`. The plan is in `prereg/prereg.md`, committed before any neural data was loaded.
 
+## Post-hoc sensitivity analyses (see QC.md)
+These were added after a methodological review, and the pre-registered results above are unchanged.
+- **Plane QC:** 80 of 968 planes failed z-drift QC and 216 have no QC. Excluding them leaves H1 and H2 essentially unchanged.
+- **H2 holds** with temporal-block cross-validation, and with lick-free flashes when decoding raw activity (6/6 mice in each).
+- **H2 is weak in the strictest test:** baseline-corrected evoked responses on lick-free flashes give −0.028, 4/6 mice, p = 0.22. The decline is best described as a change in population activity during the omission phase. Evidence that the evoked change signal itself weakens is weak.
+- **H1** stays small and inconclusive in every version (pooled ΔMAE −0.019 to −0.027, with 5/6 mice improved).
+- **Not yet done:** analysis of the same tracked neurons across sessions.
+
 ## Possible next analysis
 Test whether population representations change gradually across acquisition, not only between phases, for a more direct link to experience-dependent learning.
 
@@ -21,7 +29,9 @@ src/01_sessions.py         session table (public AIND metadata API + S3 listing)
 src/02_behavior.py         per-session hit/false-alarm rates, d' (log-linear correction), Fig. 1
 src/03_neural_features.py  streams processed NWB (zarr) per session, soma ROIs only, per-plane features
 src/04_analysis.py         H1 (LOMO forecast, cluster bootstrap) and H2 (exact sign-flip test), Figs. 2-3
+src/05-09                  exploratory and post-hoc: drift check, plane QC, sensitivity features, sensitivity tests, annotated figures
 ```
+Full definitions are in METHODS.md, and the reproduction commands are at its end.
 Data is streamed anonymously from `s3://aind-open-data` and not stored here.
 
 ## Limitations

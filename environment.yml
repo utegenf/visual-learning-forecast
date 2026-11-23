@@ -1,0 +1,15 @@
+name: visual-learning-forecast
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - scipy=1.18.1
+  - matplotlib=3.10.9
+  - pip
+  - pip:
+      # On hosts with old glibc, install with: pip install --only-binary=:all: -r <these>
+      - numpy==2.5.5
+      - pandas==2.3.3
+      - scikit-learn==1.7.2
+      - zarr==2.18.7
+      - s3fs==2026.9.0
