@@ -37,7 +37,7 @@ Calcium imaging measures activity, not synaptic change. All results are correlat
 ## Results (analysis exactly as pre-registered)
 - **Implementation detail the plan left open:** both H1 models are scored on the same 73 transitions, those whose session t has all neural features. 121 task sessions × 8 planes were extracted, with no failures.
 - **H1, not supported.** Held-out MAE of next-session Δd′ was 0.442 for the behaviour-only model and 0.417 with neural features. ΔMAE −0.025, 95% CI −0.051 to +0.001. The upper bound is just above 0, so the rule is not met. Neural features lowered error in 5 of 6 held-out mice.
-- **H2, supported.** Change-vs-non-change decoding accuracy fell from OPHYS_4 to OPHYS_6 in all 6 mice: mean −0.070, per mouse −0.03 to −0.09, exact two-sided p = 0.031 (the minimum possible with 6 mice).
+- **H2, supported.** Change-vs-non-change decoding accuracy fell from OPHYS_4 to OPHYS_6 in all 6 mice: mean −0.070, per mouse −0.03 to −0.09, exact two-sided sign-flip p = 0.031. Interpretation: a consistent phase-associated change. It is not evidence that reward removal caused the change (see the confound below).
 
 ## Exploratory (not pre-registered)
 - **Drift check.** The OPHYS_4 → OPHYS_6 drop exceeds what each mouse's pre-OPHYS_4 trend predicts, in 6 of 6 mice (mean excess −0.073). See `results/tables/exploratory_h2_drift_check.csv`.
