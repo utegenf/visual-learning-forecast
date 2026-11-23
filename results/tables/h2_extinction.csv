@@ -1,0 +1,2 @@
+n_mice,mean_diff,per_mouse,p_two_sided,H2_supported
+6,-0.07030599652017255,"[-0.082, -0.089, -0.063, -0.081, -0.078, -0.03]",0.03125,True
